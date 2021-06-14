@@ -5,8 +5,9 @@ function TravelGuide() {
 }
 
 TravelGuide.prototype.addState = function(state) { 
-  this.state[state.location] = state 
-  }
+  this.state[state.name] = state;
+  console.table(travelGuide.state)  
+}
 
 
 // Destination logic
@@ -19,19 +20,21 @@ function Destination(landmark, season, notes) {
 
 // State logic
 
-function State(location){
-  this.location = location;
+function State(stateName){
+  this.name = stateName;
+  this.destinations = {}
 }
 
 State.prototype.addDestination = function(destination) {
-  this.destination[destination.landmark] = destination
+  this.destinations[destination.landmark] = destination
 }
 
 let indiana = new State("Indiana")
-let newHampshire = new State("New Hampshire")
+let newHampshire = new State("New Hampshire");
 
 let indianaDestination1 = new Destination('Harts creek', 'muggy all year, or its cold', 'everyone plays basketball')
 let indianaDestination2 = new Destination("Indianapolis", "great in winter the walkways are covered and heated", "Once again, big basketball place")
+
 let newHampshireDestination1 = new Destination('The Old Man on the Mountain', 'Winter', 'Nice place to leave')
 let newHampshireDestination2 = new Destination("Franconia", "Franconia in autumn is a delight", "Lots of hikers and granite")
 
