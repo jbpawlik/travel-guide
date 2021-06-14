@@ -1,6 +1,6 @@
 // Business Logic
 
-function travelGuide() {
+function TravelGuide() {
   this.destinations = {}
 }
 
@@ -10,3 +10,6 @@ function Destination(location, landmarks, season, notes) {
   this.season = season;
   this.notes = notes;
 }
+
+
+
